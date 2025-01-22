@@ -1,0 +1,25 @@
+{
+  "name": "e-sistemjejakalumni",
+  "version": "1.0.0",
+  "description": "Kemajuan pembangunan teknologi yang dicapai manusia era ini banyak mempengaruhi \r aspek  sosio-ekonomi  budaya  manusia.  Kebanyakan  aktiviti  serta  transaksi  pengurusan \r dan perniagaan yang sebelum ini dijalankan secara manual kini telah dinaiktaraf kepada \r aktiviti yang berbentuk elektronik. Portal Alumni ini dibangunkan adalah untuk mengumpul \r maklumat  bekas  pelajar  KVKS. Dengan wujudnya sistem ini, ahli alumni yang berdaftar \r boleh melihat da n mengemaskini maklumat mereka dari semasa ke semasa. Di samping \r itu, ahli Alumni dapat menerima maklumat  mengenai  perkembangan  semasa  berkenaan \r pergerakan Alumni KVKS. Dengan ini saluran dan medium aliran maklumat dapat berlaku \r dengan lebih lancar dan sistematik.",
+  "main": "index.js",
+  "scripts": {
+  "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/output.css --watch"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuizzIsZynV22/E-SistemJejakAlumni.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MuizzIsZynV22/E-SistemJejakAlumni/issues"
+  },
+  "homepage": "https://github.com/MuizzIsZynV22/E-SistemJejakAlumni#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}
