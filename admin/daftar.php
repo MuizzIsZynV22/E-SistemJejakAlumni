@@ -17,7 +17,7 @@
 
         <!-- Login Form Section -->
         <div class="md:w-2/3 bg-orange-100 p-8 rounded-lg shadow-lg m-4">
-            <h2 class="text-center text-2xl font-bold text-green-500 mb-6">Log Masuk Admin
+            <h2 class="text-center text-2xl font-bold text-green-500 mb-6">Daftar Admin
                 <br><br>
                 <div class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-green-100 rounded-full dark:bg-green-600">
                     <svg class="absolute w-24 h-24 text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
@@ -33,11 +33,15 @@
                     <label for="password_admin" class="block text-gray-700 font-semibold">Kata Laluan</label>
                     <input type="password" id="password_admin" name="password_admin" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
                 </div>
+                <div>
+                    <label for="password_admin_confirm" class="block text-gray-700 font-semibold">Sahkan Kata Laluan</label>
+                    <input type="password" id="password_admin_confirm" name="password_admin_confirm" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                </div>
 
                 <br><br>
 
                 <div class="text-center">
-                    <button name="signin_admin" type="submit" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Log Masuk</button>
+                    <button name="signup_admin" type="submit" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Log Masuk</button>
                     <!-- <a href="./admin_index.php" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600">Log Masuk</a> -->
                 </div>
             </form>

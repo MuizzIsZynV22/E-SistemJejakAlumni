@@ -23,21 +23,22 @@
                     <svg class="absolute w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
                 </div>
             </h2>
-            <form class="space-y-4">
+            <form method="post" action="./backend/alumni.php" class="space-y-4">
+                <input type="hidden" name="token" value="<?php echo $token?>">
                 <div>
-                    <label for="email" class="block text-gray-700 font-semibold">Emel</label>
-                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <label for="email_alumni" class="block text-gray-700 font-semibold">Emel</label>
+                    <input type="email" id="email_alumni" name="email_alumni" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
                 </div>
                 <div>
-                    <label for="password" class="block text-gray-700 font-semibold">Kata Laluan</label>
-                    <input type="password" id="password" name="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <label for="password_alumni" class="block text-gray-700 font-semibold">Kata Laluan</label>
+                    <input type="password" id="password_alumni" name="password_alumni" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
                 </div>
 
                 <br><br>
 
                 <div class="text-center">
-                    <!-- <button type="submit" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600">Log Masuk</button> -->
-                    <a href="./user1_index.php" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600">Log Masuk</a>
+                    <button type="submit" name="login_alumni" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600">Log Masuk</button>
+                    <!-- <a href="./user1_index.php" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600">Log Masuk</a> -->
                 </div>
             </form>
             <p class="mt-4 text-center text-sm text-gray-600">Alumni yang belum daftar? <a href="./signup.php" class="text-orange-700 font-semibold underline hover:text-red-500">Klik sini untuk Daftar.</a></p>

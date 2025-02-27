@@ -50,13 +50,13 @@
         }
         
         //* Set text
-        $date = date("d/m/Y h:i");
-        $file_content = file_get_contents($location);
-        $text = "($date) ($ip): $text";
+        // $date = date("d/m/Y h:i");
+        // $file_content = file_get_contents($location);
+        // $text = "($date) ($ip): $text";
         
         //* Log text
-        $text .= "\n$file_content";
-        file_put_contents($location, $text);
+        // $text .= "\n$file_content";
+        // file_put_contents($location, $text);
 
     }
 
@@ -85,6 +85,23 @@
         }
 
         return $formatted_text;
+    }
+
+    function encodeObj($id, $message, $status){
+
+        $output = [
+            "id" => $id,
+            "message" => $message,
+            "status" => $status
+        ];
+        return json_encode($output);
+
+    }
+    function addJson($originalObj, $newObj){
+        $originalObj = json_decode($originalObj);
+        $newObj = json_decode($newObj);
+        $mergedObject = (object) array_merge((array) $originalObj, (array) $newObj);
+        return json_encode($mergedObject);
     }
 
 ?>

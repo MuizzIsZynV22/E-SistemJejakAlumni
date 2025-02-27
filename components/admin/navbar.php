@@ -1,3 +1,24 @@
+<?php 
+
+    // include("$location_index/backend/functions/system.php");
+    // include("$location_index/backend/functions/user.php");
+    // include("$location_index/backend/models/alumni.php");
+
+    $verify = verifySessionAdmin($secret_key, $connect);
+
+    $verify = json_decode($verify, true);
+    
+    if(!isset($log_location)){
+        if($verify['status'] != "success"){
+           echo '<script>setTimeout(function() {window.location.href = "'. $location_index.'/admin/signin.php"}, 0);</script>';
+        } 
+
+        // FIXME betulkan cara taknak bagi show dashboard 
+        // alert_message("error", "User Not Logged In");
+    }
+
+?>
+
 <nav class="bg-white border-b border-blue-900 dark:bg-white">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -24,17 +45,25 @@
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-white md:dark:bg-white dark:border-gray-700">
         <li>
-          <a href="<?php echo $location_index?>/" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-blue-600 md:dark:hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:underline md:dark:hover:bg-transparent">Utama</a>
+          <a href="<?php echo $location_index?>/alumni/" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-blue-600 md:dark:hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:underline md:dark:hover:bg-transparent">Utama</a>
           <!-- <a href="./index.php" class="block py-2 px-3 text-white bg-blue-800 rounded md:bg-transparent md:text-blue-800 md:p-0 dark:text-blue-600 md:dark:text-blue-600" aria-current="page">Utama</a> -->
         </li>
         <li>
-          <a href="#info" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-blue-600 md:dark:hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:underline md:dark:hover:bg-transparent">Info</a>
+          <a href="<?php echo $location_index?>/alumni/info.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-blue-600 md:dark:hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:underline md:dark:hover:bg-transparent">Info</a>
         </li>
         <li>
+          <!--TODO tukar -->
           <a href="<?php echo $location_index?>/statistic.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 dark:text-blue-600 md:dark:hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:underline md:dark:hover:bg-transparent">Statistik</a>
         </li>
         <li>
-          <a href="<?php echo $location_index?>/signin.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-800 md:p-0 dark:text-blue-600 md:dark:hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:underline md:dark:hover:bg-transparent">Log Masuk</a>
+          <!-- TODO tukar -->
+
+          <form action="<?php echo $location_index?>/backend/alumni.php" method="post">
+            <input type="hidden" name="token" value="<?php echo $token?>">
+
+            <button value="Log Keluar" type="submit" name="signout_alumni" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-800 md:p-0 dark:text-blue-600 md:dark:hover:text-blue-600 dark:hover:bg-gray-700 dark:hover:underline md:dark:hover:bg-transparent">Log Keluar</button>
+
+          </form>
         </li>
       </ul>
     </div>

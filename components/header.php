@@ -1,6 +1,15 @@
 <?php
     require_once("$location_index/config/connect.php");
+    
     session_start();
+
+    include("$location_index/backend/functions/system.php");
+    include("$location_index/backend/functions/user.php");
+    include("$location_index/backend/models/alumni.php");
+    include("$location_index/backend/models/admin.php");
+
+    include "$location_index/backend/functions/csrf.php";
+    $token = generateCSRFToken();
 ?>
 
 <!DOCTYPE html>
